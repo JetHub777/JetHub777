@@ -1,0 +1,31 @@
+def add(n1, n2):
+    return n1 + n2
+
+def minus(n1, n2):
+    return n1 - n2
+
+def multiply(n1, n2):
+    return n1 * n2
+
+def divide(n1, n2):
+    return n1 / n2
+operations = {
+  "+": add,
+  "-": minus,
+  "*": multiply,
+  "/": divide,  
+}
+while True:
+  num1 = int(input("enter a number: "))
+  for keys in operations:
+    print(keys)
+  operation_symbol = input("pick an operation from the line above: ")
+  num2 = int(input("enter another number: "))
+  calc_function = operations[operation_symbol]
+  answer = calc_function(num1, num2)
+  print(answer)
+  repeat = input("do you want to continue? yes or no: ")
+  repeat1 = repeat.lower()
+  if repeat1 != "yes":
+     break
+print("Goodbye")
