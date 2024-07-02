@@ -1,0 +1,28 @@
+import random
+print("BLACK JACK")
+
+start = input("Do u want to play?: ")
+if start == "yes":
+    r_num1 = random.randint(1, 10)
+    r_num2 = random.randint(1, 10)
+    ur_sum_card = r_num1 + r_num2
+    print(f"ur cards are:{r_num1} {r_num2}")
+
+    comp_num1 = random.randint(1, 10)
+    comp_num2 = random.randint(1, 10)
+    comp_card_sum = comp_num1 + comp_num2
+    print(f"The computer cards are:{comp_num1} {comp_num2}")
+
+    another_card = input("Do u want another card?: ")
+    if another_card == "yes":
+      r_num3 = random.randint(1, 10)
+      ur_sum_card = ur_sum_card + r_num3
+      print(f"ur cards are:{r_num1} {r_num2} {r_num3}") 
+    if ur_sum_card > comp_card_sum :
+       if not ur_sum_card > 21:
+          print("You Win")
+       else:
+        print("Bust")
+
+    else:
+       print("You lose")
